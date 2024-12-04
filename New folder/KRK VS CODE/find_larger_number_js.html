@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Larger Number</title>
+    <script>
+        function findLarger() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            alert("The larger number is: " + (num1 > num2 ? num1 : num2));
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); findLarger();">
+        <input type="number" id="num1" placeholder="Enter first number" required>
+        <input type="number" id="num2" placeholder="Enter second number" required>
+        <button type="submit">Find Larger</button>
+    </form>
+</body>
+</html>

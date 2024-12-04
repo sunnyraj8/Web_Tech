@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Combinations</title>
+    <script>
+        function generateCombinations() {
+            let str = document.getElementById("inputString").value;
+            let result = [];
+            for (let i = 0; i < str.length; i++) {
+                for (let j = i + 1; j <= str.length; j++) {
+                    result.push(str.substring(i, j));
+                }
+            }
+            alert("Combinations: " + result.join(", "));
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); generateCombinations();">
+        <input type="text" id="inputString" placeholder="Enter a string" required>
+        <button type="submit">Generate</button>
+    </form>
+</body>
+</html>

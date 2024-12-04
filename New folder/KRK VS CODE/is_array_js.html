@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check if Array</title>
+    <script>
+        function isArray(input) {
+            let result = Array.isArray(input);
+            alert(`Input is ${result ? "an array" : "not an array"}.`);
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); isArray(document.getElementById('input').value);">
+        <input type="text" id="input" placeholder="Enter input to check" required>
+        <button type="submit">Check</button>
+    </form>
+</body>
+</html>

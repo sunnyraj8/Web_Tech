@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Numbers</title>
+    <script>
+        function sortNumbers() {
+            let numbers = [];
+            for (let i = 1; i <= 50; i++) {
+                numbers.push(i);
+            }
+            alert("Sorted Numbers: " + numbers.sort((a, b) => a - b).join(", "));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="sortNumbers()">Sort 50 Natural Numbers</button>
+</body>
+</html>

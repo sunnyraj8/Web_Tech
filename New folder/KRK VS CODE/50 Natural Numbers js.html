@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Natural Numbers</title>
+    <script>
+        function sortNaturalNumbers() {
+            let numbers = [];
+            for (let i = 1; i <= 50; i++) {
+                numbers.push(i);
+            }
+            numbers.sort((a, b) => a - b);
+            alert("Sorted Numbers: " + numbers.join(", "));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="sortNaturalNumbers()">Sort Numbers</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find GCD</title>
+    <script>
+        function findGCD() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            while (num2) {
+                let temp = num2;
+                num2 = num1 % num2;
+                num1 = temp;
+            }
+            alert("GCD is " + num1);
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); findGCD();">
+        <input type="number" id="num1" placeholder="Enter first number" required>
+        <input type="number" id="num2" placeholder="Enter second number" required>
+        <button type="submit">Find GCD</button>
+    </form>
+</body>
+</html>

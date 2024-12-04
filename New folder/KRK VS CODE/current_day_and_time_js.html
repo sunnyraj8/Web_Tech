@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Day and Time</title>
+    <script>
+        function displayDateTime() {
+            let today = new Date();
+            let dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let day = dayList[today.getDay()];
+            let hours = today.getHours();
+            let minutes = today.getMinutes();
+            let seconds = today.getSeconds();
+            let amPm = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12 || 12;
+            alert(`Today is: ${day}\nCurrent time is: ${hours} ${amPm} : ${minutes} : ${seconds}`);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="displayDateTime()">Show Current Day and Time</button>
+</body>
+</html>
